@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Taobao Crawler",
-  "version": "1.0",
-  "description": "Scrape product info from Taobao search results.",
+  "name": "Taobao & JD Crawler",
+  "version": "1.1",
+  "description": "Scrape product info from Taobao and JD.com search results.",
   "permissions": [
     "activeTab",
     "scripting",
@@ -25,6 +25,10 @@
     {
       "matches": ["*://s.taobao.com/*", "*://www.taobao.com/*"],
       "js": ["content.js"]
+    },
+    {
+      "matches": ["*://search.jd.com/*", "*://list.jd.com/*", "*://*.jd.com/*"],
+      "js": ["jd-content.js"]
     }
   ]
 }

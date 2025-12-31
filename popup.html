@@ -4,15 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taobao Crawler</title>
+  <title>商品爬虫 - 淘宝 & 京东</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
   <div class="container">
-    <h2>淘宝商品爬虫</h2>
+    <h2>商品爬虫</h2>
 
     <div class="input-group">
+      <div style="display: flex; align-items: center; gap: 5px; margin-bottom: 5px;">
+        <label for="platformSelect" style="font-size: 12px; color: #666;">选择平台:</label>
+        <select id="platformSelect" style="flex: 1; padding: 6px; border: 1px solid #ddd; border-radius: 4px;">
+          <option value="taobao">淘宝</option>
+          <option value="jd">京东</option>
+        </select>
+      </div>
       <input type="text" id="keyword" placeholder="输入关键词 (例如: 男装)">
       <div style="display: flex; align-items: center; gap: 5px; margin-top: 5px;">
         <label for="pageLimit" style="font-size: 12px; color: #666;">爬取页数:</label>
@@ -36,7 +43,7 @@
     </div>
 
     <div class="footer">
-      <p>注意：请确保已登录淘宝</p>
+      <p>注意：请确保已登录对应平台</p>
     </div>
   </div>
   <script src="popup.js"></script>
